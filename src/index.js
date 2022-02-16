@@ -8,13 +8,15 @@ import { store } from "./app/store";
 import { Provider } from "react-redux";
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Auth from "./features/auth/Auth"
 
 ReactDOM.render(
   <Provider store={store}>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-      </Routes>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Auth />} />
+      <Route path="/tasks" element={<App />} />
+    </Routes>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')
